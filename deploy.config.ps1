@@ -1,0 +1,5 @@
+$StorageAccount = ""
+$StorageContainer = ""
+$StoragePath = ""
+$LicensePath = ""
+$ApiKey = ""

@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "sqlServerLogin": {
+      "value": "sql"
+    },
+    "sqlServerPassword": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-sqlpassword"
+      }
+    },
+    "sitecoreAdminPassword": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-sitecorepassword"
+      }
+    },
+    "singleMsDeployPackageUrl": {
+      "value": ""
+    },
+    "analyticsMongoDbConnectionString": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-mongodb-analytics"
+      }
+    },
+    "trackingLiveMongoDbConnectionString": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-mongodb-trackinglive"
+      }
+    },
+    "trackingHistoryMongoDbConnectionString": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-mongodb-trackinghistory"
+      }
+    },
+    "trackingContactMongoDbConnectionString": {
+      "reference" : {
+        "keyVault": {
+          id: ""
+        },
+        "secretname" : "habitat-mongodb-trackingcontact"
+      }
+    },
+    "modules" : {
+      "value" : {
+        "items" : [
+          {
+            "name" : "wffm",
+            "templateLink" : "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/WFFM%208.2.3/xp0/azuredeploy.json",
+            "parameters" : {
+              "singleMsDeployPackageUrl" : ""
+            }
+          },
+          {
+            "name" : "habitat",
+            "templateLink" : "",
+            "parameters" : {
+              "singleMsDeployPackageUrl" : ""
+            }
+          },
+          {
+            "name" : "bootloader",
+            "templateLink" : "",
+            "parameters" : {
+              "msDeployPackageUrl" : ""
+            }
+          }
+        ]
+      }
+    }
+  }
+}
+
