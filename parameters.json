@@ -68,14 +68,14 @@
           },
           {
             "name" : "habitat",
-            "templateLink" : "",
+            "templateLink" : "https://raw.githubusercontent.com/sc-dmitrykostenko/sitecore-habitat-azure/master/arm/habitat.json",
             "parameters" : {
               "singleMsDeployPackageUrl" : ""
             }
           },
           {
             "name" : "bootloader",
-            "templateLink" : "",
+            "templateLink" : "https://raw.githubusercontent.com/sc-dmitrykostenko/sitecore-habitat-azure/master/arm/bootloader.json",
             "parameters" : {
               "msDeployPackageUrl" : ""
             }
