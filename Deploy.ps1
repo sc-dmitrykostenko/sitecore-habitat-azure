@@ -58,8 +58,17 @@ $Parameters | ConvertTo-Json -Depth 99 | Set-Content -Encoding UTF8 "parameters.
 
 $TemplateUri = "https://raw.githubusercontent.com/Sitecore/Sitecore-Azure-Quickstart-Templates/master/Sitecore%208.2.4/xp0/azuredeploy.json"
 
-echo "Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl $TemplateUri -ArmParametersPath `"parameters.gen.json`" -LicenseXmlPath $LicensePath -SetKeyValue @{ `"singleWebAppName`" = `"$DeploymentId-$Slot`"}"
-Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl $TemplateUri -ArmParametersPath "parameters.gen.json" -LicenseXmlPath $LicensePath -SetKeyValue @{ "singleWebAppName" = "$DeploymentId-$Slot"}
+$SlotParameters = @{
+  "singleWebAppName" = "$DeploymentId-$Slot";
+  "webSqlDatabaseName" = "$DeploymentId-$Slot-web-db";
+  "singleHostingPlanSkuName" = "B2";
+  "singleCoreSqlDatabaseUserName" = "sitecore$Slot";
+  "singleMasterSqlDatabaseUserName" = "sitecore$Slot";
+  "singleReportingSqlDatabaseUserName" = "sitecore$Slot";
+}
+
+echo "Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl $TemplateUri -ArmParametersPath `"parameters.gen.json`" -LicenseXmlPath $LicensePath -SetKeyValue $SlotParameters"
+Start-SitecoreAzureDeployment -Name $DeploymentId -Location $Location -ArmTemplateUrl $TemplateUri -ArmParametersPath "parameters.gen.json" -LicenseXmlPath $LicensePath -SetKeyValue $SlotParameters
 
 ################################################################
 # Wait for the instance to start up
