@@ -8,7 +8,7 @@
     "sqlServerPassword": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-sqlpassword"
       }
@@ -16,18 +16,18 @@
     "sitecoreAdminPassword": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-sitecorepassword"
       }
     },
     "singleMsDeployPackageUrl": {
-      "value": ""
+      "value": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
     },
     "analyticsMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-mongodb-analytics"
       }
@@ -35,7 +35,7 @@
     "trackingLiveMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-mongodb-trackinglive"
       }
@@ -43,7 +43,7 @@
     "trackingHistoryMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-mongodb-trackinghistory"
       }
@@ -51,7 +51,7 @@
     "trackingContactMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          "id": ""
+          "id": "/subscriptions/5bc17fae-2e49-4c26-9774-7c961fa2ea7e/resourceGroups/scsym-infra/providers/Microsoft.KeyVault/vaults/scsym-vault"
         },
         "secretName" : "habitat-mongodb-trackingcontact"
       }
