@@ -8,17 +8,17 @@
     "sqlServerPassword": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-sqlpassword"
+        "secretName" : "habitat-sqlpassword"
       }
     },
     "sitecoreAdminPassword": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-sitecorepassword"
+        "secretName" : "habitat-sitecorepassword"
       }
     },
     "singleMsDeployPackageUrl": {
@@ -27,33 +27,33 @@
     "analyticsMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-mongodb-analytics"
+        "secretName" : "habitat-mongodb-analytics"
       }
     },
     "trackingLiveMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-mongodb-trackinglive"
+        "secretName" : "habitat-mongodb-trackinglive"
       }
     },
     "trackingHistoryMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-mongodb-trackinghistory"
+        "secretName" : "habitat-mongodb-trackinghistory"
       }
     },
     "trackingContactMongoDbConnectionString": {
       "reference" : {
         "keyVault": {
-          id: ""
+          "id": ""
         },
-        "secretname" : "habitat-mongodb-trackingcontact"
+        "secretName" : "habitat-mongodb-trackingcontact"
       }
     },
     "modules" : {
